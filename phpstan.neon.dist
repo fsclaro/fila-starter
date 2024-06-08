@@ -1,0 +1,28 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    paths:
+        - app/Http/Controllers
+        - app/Models
+        - app/Repositories
+        - app/Enums
+        - app/Helpers
+        - app/Providers
+        - app/Services
+        - app/databases
+        - app/config
+        - app/routes
+
+    # Level 9 is the highest level
+    level: 5
+
+    ignoreErrors:
+        - '#PHPDoc#'
+
+    excludePaths:
+        - app/Http/Controllers/Auth
+        - app/Http/Middleware
+        - app/Providers
+
+#    checkMissingIterableValueType: false
