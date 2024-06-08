@@ -23,7 +23,8 @@
         "package.json",
         "phpunit.xml",
         "webpack.mix.js",
-        "yarn.lock"
+        "yarn.lock",
+        "_ide_helper*.php"
     ],
     "rules": {
         "binary_operator_spaces": {
