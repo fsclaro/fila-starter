@@ -13,7 +13,8 @@
         "doctrine/dbal": "^4.0",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "z3d0x/filament-logger": "^0.7.1"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
