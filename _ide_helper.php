@@ -19105,6 +19105,50 @@ namespace Livewire {
             }
     }
 
+namespace MarcoGermani87\FilamentCookieConsent\Facades {
+            /**
+     * 
+     *
+     * @see \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent
+     */        class FilamentCookieConsent {
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function getId()
+        {
+                        /** @var \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent $instance */
+                        return $instance->getId();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function register($panel)
+        {
+                        /** @var \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent $instance */
+                        return $instance->register($panel);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function boot($panel)
+        {
+                        /** @var \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent $instance */
+                        return $instance->boot($panel);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function make()
+        {
+                        return \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent::make();
+        }
+            }
+    }
+
 namespace Illuminate\Support {
             /**
      * 
@@ -25963,6 +26007,7 @@ namespace  {
             class FilamentEditProfile extends \Joaopaulolndev\FilamentEditProfile\Facades\FilamentEditProfile {}
             class FilamentGeneralSettings extends \Joaopaulolndev\FilamentGeneralSettings\Facades\FilamentGeneralSettings {}
             class Livewire extends \Livewire\Livewire {}
+            class Skeleton extends \MarcoGermani87\FilamentCookieConsent\Facades\FilamentCookieConsent {}
     }
 
 

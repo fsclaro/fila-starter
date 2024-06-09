@@ -46,6 +46,7 @@ class DashboardPanelProvider extends PanelProvider
                 config('filament-logger.activity_resource')
             ])
             ->plugins([
+                \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent::make(),
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
                 new Lockscreen(),
                 FilamentEditProfilePlugin::make()

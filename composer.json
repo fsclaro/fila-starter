@@ -16,6 +16,7 @@
         "joaopaulolndev/filament-general-settings": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "marcogermani87/filament-cookie-consent": "^1.0",
         "marjose123/filament-lockscreen": "^2.0",
         "z3d0x/filament-logger": "^0.7.1"
     },
