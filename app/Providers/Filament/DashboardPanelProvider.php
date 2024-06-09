@@ -22,6 +22,7 @@ use lockscreen\FilamentLockscreen\Http\Middleware\Locker;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
 use Filament\Navigation\MenuItem;
+use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
 
 class DashboardPanelProvider extends PanelProvider
 {
@@ -62,7 +63,14 @@ class DashboardPanelProvider extends PanelProvider
                         value: true,
                         directory: 'avatars',
                         rules: 'mimes:jpeg,png|max:1024'
-                    )
+                    ),
+                FilamentGeneralSettingsPlugin::make()
+                    ->canAccess(fn() => auth()->user()->id === 1)
+                    ->setSort(3)
+                    ->setIcon('heroicon-o-cog')
+                    ->setNavigationGroup('Configurações')
+                    ->setTitle('Configurações Gerais')
+                    ->setNavigationLabel('Configurações Gerais'),
             ])
             ->userMenuItems([
                 'profile' => MenuItem::make()

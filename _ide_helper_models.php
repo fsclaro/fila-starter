@@ -23,6 +23,8 @@ namespace App\Models{
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $custom_fields
+ * @property string|null $avatar_url
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\Permission\Models\Permission> $permissions
@@ -35,7 +37,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions, $without = false)
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
  * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null, $without = false)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereAvatarUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereCustomFields($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
@@ -46,6 +50,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
  */
-	class User extends \Eloquent {}
+	class User extends \Eloquent implements \Filament\Models\Contracts\HasAvatar {}
 }
 

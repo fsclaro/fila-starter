@@ -18718,6 +18718,15 @@ namespace Joaopaulolndev\FilamentEditProfile\Facades {
             }
     }
 
+namespace Joaopaulolndev\FilamentGeneralSettings\Facades {
+            /**
+     * 
+     *
+     * @see \Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettings
+     */        class FilamentGeneralSettings {
+            }
+    }
+
 namespace Livewire {
             /**
      * 
@@ -25952,10 +25961,16 @@ namespace  {
             class FilamentShield extends \BezhanSalleh\FilamentShield\Facades\FilamentShield {}
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
             class FilamentEditProfile extends \Joaopaulolndev\FilamentEditProfile\Facades\FilamentEditProfile {}
+            class FilamentGeneralSettings extends \Joaopaulolndev\FilamentGeneralSettings\Facades\FilamentGeneralSettings {}
             class Livewire extends \Livewire\Livewire {}
     }
 
 
+namespace Facades\Livewire\Features\SupportFileUploads {
+    /**
+     * @mixin \Livewire\Features\SupportFileUploads\GenerateSignedUploadUrl     */
+    class GenerateSignedUploadUrl extends \Livewire\Features\SupportFileUploads\GenerateSignedUploadUrl {}
+}
 
 
 
