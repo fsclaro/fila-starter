@@ -17,6 +17,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use lockscreen\FilamentLockscreen\Lockscreen;
+use lockscreen\FilamentLockscreen\Http\Middleware\Locker;
 
 class DashboardPanelProvider extends PanelProvider
 {
@@ -40,7 +42,8 @@ class DashboardPanelProvider extends PanelProvider
                 config('filament-logger.activity_resource')
             ])
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+                new Lockscreen(),
             ])
             ->widgets([
                 Widgets\AccountWidget::class,
@@ -59,6 +62,7 @@ class DashboardPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                Locker::class,
             ]);
     }
 }
