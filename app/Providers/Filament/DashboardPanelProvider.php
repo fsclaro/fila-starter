@@ -49,11 +49,11 @@ class DashboardPanelProvider extends PanelProvider
             ->plugins([
                 // \Hasnayeen\Themes\ThemesPlugin::make(),
 
-                FilamentProgressbarPlugin::make()->color('#29b'),
-
                 // StickyHeaderPlugin::make()
                 //     ->floating()
                 //     ->colored(),
+
+                FilamentProgressbarPlugin::make()->color('#29b'),
 
                 \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent::make(),
 
@@ -67,9 +67,9 @@ class DashboardPanelProvider extends PanelProvider
                     ->setNavigationGroup('Group Profile')
                     ->setIcon('heroicon-o-user')
                     ->setSort(10)
-                    // ->canAccess(fn () => auth()->user()->id === 1)
                     ->shouldRegisterNavigation(false)
                     ->shouldShowDeleteAccountForm(fn () => auth()->user()->roles->first()->name !== 'Super Admin')
+                    // ->canAccess(fn () => auth()->user()->id === 1)
                     // ->shouldShowSanctumTokens()
                     ->shouldShowBrowserSessionsForm()
                     ->shouldShowAvatarForm(
@@ -98,8 +98,8 @@ class DashboardPanelProvider extends PanelProvider
             ])
 
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Widgets\AccountWidget::class,
+                // Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -111,7 +111,7 @@ class DashboardPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
-                \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
+                // \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
             ])
             ->authMiddleware([
                 Authenticate::class,
