@@ -23,6 +23,7 @@ use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
 use Filament\Navigation\MenuItem;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
 
 class DashboardPanelProvider extends PanelProvider
 {
@@ -46,9 +47,16 @@ class DashboardPanelProvider extends PanelProvider
                 config('filament-logger.activity_resource')
             ])
             ->plugins([
+                // StickyHeaderPlugin::make()
+                //     ->floating()
+                //     ->colored(),
+
                 \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent::make(),
+
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+
                 new Lockscreen(),
+
                 FilamentEditProfilePlugin::make()
                     ->setTitle('Meu Perfil')
                     ->setNavigationLabel('My Profile')
@@ -65,6 +73,7 @@ class DashboardPanelProvider extends PanelProvider
                         directory: 'avatars',
                         rules: 'mimes:jpeg,png|max:1024'
                     ),
+
                 FilamentGeneralSettingsPlugin::make()
                     ->canAccess(fn() => auth()->user()->id === 1)
                     ->setSort(3)
