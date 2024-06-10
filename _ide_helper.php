@@ -18727,6 +18727,15 @@ namespace Joaopaulolndev\FilamentGeneralSettings\Facades {
             }
     }
 
+namespace Leandrocfe\FilamentPtbrFormFields\Facades {
+            /**
+     * 
+     *
+     * @see \Leandrocfe\FilamentPtbrFormFields\FilamentPtbrFormFields
+     */        class FilamentPtbrFormFields {
+            }
+    }
+
 namespace Livewire {
             /**
      * 
@@ -26006,6 +26015,7 @@ namespace  {
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
             class FilamentEditProfile extends \Joaopaulolndev\FilamentEditProfile\Facades\FilamentEditProfile {}
             class FilamentGeneralSettings extends \Joaopaulolndev\FilamentGeneralSettings\Facades\FilamentGeneralSettings {}
+            class FilamentPtbrFormFields extends \Leandrocfe\FilamentPtbrFormFields\Facades\FilamentPtbrFormFields {}
             class Livewire extends \Livewire\Livewire {}
             class Skeleton extends \MarcoGermani87\FilamentCookieConsent\Facades\FilamentCookieConsent {}
     }
