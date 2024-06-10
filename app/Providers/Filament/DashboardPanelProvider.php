@@ -23,7 +23,7 @@ use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
 use Filament\Navigation\MenuItem;
 use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
-use Awcodes\FilamentStickyHeader\StickyHeaderPlugin;
+use Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin;
 
 class DashboardPanelProvider extends PanelProvider
 {
@@ -47,6 +47,8 @@ class DashboardPanelProvider extends PanelProvider
                 config('filament-logger.activity_resource')
             ])
             ->plugins([
+                FilamentProgressbarPlugin::make()->color('#29b'),
+
                 // StickyHeaderPlugin::make()
                 //     ->floating()
                 //     ->colored(),

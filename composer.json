@@ -22,6 +22,7 @@
         "marcogermani87/filament-cookie-consent": "^1.0",
         "marjose123/filament-lockscreen": "^2.0",
         "mokhosh/filament-rating": "^1.1",
+        "njxqlus/filament-progressbar": "^1.0",
         "z3d0x/filament-logger": "^0.7.1"
     },
     "require-dev": {
