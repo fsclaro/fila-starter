@@ -47,6 +47,8 @@ class DashboardPanelProvider extends PanelProvider
                 config('filament-logger.activity_resource')
             ])
             ->plugins([
+                // \Hasnayeen\Themes\ThemesPlugin::make(),
+
                 FilamentProgressbarPlugin::make()->color('#29b'),
 
                 // StickyHeaderPlugin::make()
@@ -61,7 +63,7 @@ class DashboardPanelProvider extends PanelProvider
 
                 FilamentEditProfilePlugin::make()
                     ->setTitle('Meu Perfil')
-                    ->setNavigationLabel('My Profile')
+                    ->setNavigationLabel('Meu Perfil')
                     ->setNavigationGroup('Group Profile')
                     ->setIcon('heroicon-o-user')
                     ->setSort(10)
@@ -109,6 +111,7 @@ class DashboardPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+                \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
             ])
             ->authMiddleware([
                 Authenticate::class,
