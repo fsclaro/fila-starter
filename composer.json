@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "archilex/filament-toggle-icon-column": "^3.1",
         "awcodes/filament-sticky-header": "*",
         "bezhansalleh/filament-shield": "^3.2",
         "doctrine/dbal": "^4.0",
