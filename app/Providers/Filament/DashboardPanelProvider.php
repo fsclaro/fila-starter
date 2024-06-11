@@ -35,7 +35,7 @@ class DashboardPanelProvider extends PanelProvider
             ->path('dashboard')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Blue,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -47,13 +47,7 @@ class DashboardPanelProvider extends PanelProvider
                 config('filament-logger.activity_resource')
             ])
             ->plugins([
-                // \Hasnayeen\Themes\ThemesPlugin::make(),
-
-                // StickyHeaderPlugin::make()
-                //     ->floating()
-                //     ->colored(),
-
-                FilamentProgressbarPlugin::make()->color('#29b'),
+                FilamentProgressbarPlugin::make()->color('#29d'),
 
                 \MarcoGermani87\FilamentCookieConsent\FilamentCookieConsent::make(),
 
@@ -64,13 +58,11 @@ class DashboardPanelProvider extends PanelProvider
                 FilamentEditProfilePlugin::make()
                     ->setTitle('Meu Perfil')
                     ->setNavigationLabel('Meu Perfil')
-                    ->setNavigationGroup('Group Profile')
+                    ->setNavigationGroup('Grupo de Perfis')
                     ->setIcon('heroicon-o-user')
                     ->setSort(10)
                     ->shouldRegisterNavigation(false)
                     ->shouldShowDeleteAccountForm(fn () => auth()->user()->roles->first()->name !== 'Super Admin')
-                    // ->canAccess(fn () => auth()->user()->id === 1)
-                    // ->shouldShowSanctumTokens()
                     ->shouldShowBrowserSessionsForm()
                     ->shouldShowAvatarForm(
                         value: true,
